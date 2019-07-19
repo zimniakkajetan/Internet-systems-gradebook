@@ -1,0 +1,110 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+form {
+    display: none;
+}
+.tab {
+    display: block;
+}
+li {
+    list-style: none;
+}
+th {
+    text-shadow: 1px 1px;
+    color: #4DB86B;
+}
+tr:nth-child(2n) {
+    background-color: #4DE86C;
+}
+tr:hover td {
+    background: white;
+}
+input {
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+input:invalid {
+    border: 2px solid red;
+}
+:target {
+    display: block;
+    background-color: #FFFFC5;
+}
+.flexbox_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+nav {
+    flex: 1 5 100px;
+}
+.forms_container {
+    flex: 3 1 800px;
+    margin-bottom: 200px;
+}
+.header_r {
+    font-family: "Courier New";
+    background-color: #71FF60;
+}
+footer {
+    margin-top: 100px;
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(#4DE86C, #71FF61);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+}
+
+@media print {
+    *{
+        color: black;
+        background-color: white;
+    }
+    table{
+        background-color: white;
+    }
+    :target{
+        background-color: white;
+    }
+    th {
+        font-size: larger;
+        color: black;
+        border-bottom: 1px solid #ddd;
+        background-color: white;
+    }
+    td {
+        border-bottom: 1px solid #ddd;
+        background-color: white;
+    }
+    .header_r{
+        display: none;
+    }
+    input {
+        border: none;
+    }
+    select {
+        border: none;
+    }
+    input[type=search] {
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    input:invalid {
+        border: transparent;
+    }
+    td:last-child, th:last-child {
+        display: none;
+    }
+}
